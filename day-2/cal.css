@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.value {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Hide radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* Show number depending on selection */
+#zero:checked ~ .value #num {
+  content: "0";
+}
+#zero:checked ~ .value #num::after {
+  content: "0";
+}
+#one:checked ~ .value #num::after {
+  content: "1";
+}
+#minusone:checked ~ .value #num::after {
+  content: "-1";
+}
+
+/* Buttons */
+.buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4CAF50;
+  color: white;
+  transition: 0.3s;
+}
+
+.subtract {
+  background: #f44336;
+}
+
+.reset {
+  background: #555;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
