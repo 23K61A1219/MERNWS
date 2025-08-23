@@ -232,7 +232,7 @@
       // Create student object
       let student = { name, email, dob, gender: gender.value, dept, skills: selectedSkills, address };
 
-      
+      alert(JSON.stringify(student))
       // Save to Local Storage
       let students = JSON.parse(localStorage.getItem("students")) || [];
       students.push(student);

@@ -52,6 +52,26 @@
 
         <button type="submit">Submit</button>
     </form>
+    <script>
+        const form = document.getElementById("regform");
+        form.addEventListener("submit",addStudentDetails);
+        
+        function addStudentDetails(event) {
+            event.preventDefault();
+
+            let name_var = document.getElementById("name").value.trim();
+            let email_var = document.getElementById("emal").value.trim();
+            let password_var = document.getElementById("password").value;
+            let dob_var = document.getElementById("dob").value;
+            let address_var = document.getElementById("address").value.trim();
+
+            let gender_var = document.querySelector('input[name="gender"]:checked');
+            
+
+
+        }
+
+    </script>
 
 </body>
 </html>
