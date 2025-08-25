@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+</head>
+<body>
+    <script>
+    function getDataAsync(customer,food) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+            resolve(food + "is ready for "+customer+"!");
+            },5000);
+        })
+    }
+    console.log()
+    console.log()
+    getDataAsync("")
+    .then((food)=>console.log(food));
+    </script>
+</body>
+</html>
